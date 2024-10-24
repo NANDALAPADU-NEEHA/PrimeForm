@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <h1>
+            To check Prime numbers<br>
+        </h1>
+    </head>
+    <hr>
+    <body>
+        <form method="POST">{% csrf_token %}
+            <label for="n1"> Number:</label>
+            <input name="sname" id="n1" type="number" placeholder="Enter number" required>
+            <br><br> <button> Submit</button>
+        </form>
+        {% if res %}
+            <p> It is a prime number</p>
+        {% else %}
+            <p> It is not a prime number</p>
+        {% endif %}
+    </body>
+</html>
